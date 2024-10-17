@@ -16,7 +16,6 @@ if len(x)==0:
     mpswd=input("PLEASE ENTER YOUR MYSQL PASSWORD:")
     doc.write(mpswd)
     print("THANK YOU")
-    print("(CHECK FOR THE WINDOW IN BACKGROUND)")
     doc.close()
 else:
     doc.seek(0)
@@ -47,6 +46,8 @@ def mainwc():
     page=Toplevel() 
     page.geometry("1400x800")
     page.attributes("-fullscreen", True)
+
+    page.lift()
     
     page.bind("<F11>", lambda event: page.attributes("-fullscreen",not page.attributes("-fullscreen")))
     page.bind("<Escape>", lambda event: page.attributes("-fullscreen", False))
